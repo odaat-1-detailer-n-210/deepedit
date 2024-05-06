@@ -115,7 +115,7 @@ const Card = ({ image }: { image: IImage }) => {
                     </p>
                     <Image
                         src={`/assets/icons/${transformationTypes[
-                                image.transformationTypes as TransformationTypeKey
+                                image.transformationType as TransformationTypeKey
                             ].icon
                             }`}
                         alt={image.title}
