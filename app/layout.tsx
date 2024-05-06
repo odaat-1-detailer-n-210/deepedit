@@ -13,7 +13,7 @@ const IBMPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "DeepEdit",
+  title: "Deep Edit",
   description: "A SaaS app that uses deep learning algorithms to edit images, providing advanced features such as object detection and recognition.",
 };
 
@@ -31,8 +31,8 @@ export default function RootLayout({
           <header>
             {children}
           </header>
+          <Analytics />
         </body>
-        <Analytics />
       </html>
     </ClerkProvider>
   );
