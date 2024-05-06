@@ -4,9 +4,10 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useEffect } from "react";
 
 import { useToast } from "@/components/ui/use-toast";
-import { checkoutCredits } from "@/lib/actions/transaction.action";
+import { checkoutCredits } from "@/lib/actions/transaction.actions";
 
 import { Button } from "../ui/button";
+import { Toast } from "../ui/toast";
 
 const Checkout = ({
     plan,
@@ -45,7 +46,7 @@ const Checkout = ({
                 className: "error-toast",
             });
         }
-    }, []);
+    }, [toast]);
 
     const onCheckout = async () => {
         const transaction = {
