@@ -8,7 +8,7 @@ import { getUserById } from "@/lib/actions/user.actions";
 import { getImageById } from "@/lib/actions/image.actions";
 
 const Page = async ({ params: { id } }: SearchParamProps) => {
-  const { userId } = auth() as { userId: string };
+  const { userId } = auth();
 
   if (!userId) redirect("/sign-in");
 

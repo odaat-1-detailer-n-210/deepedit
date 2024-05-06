@@ -9,7 +9,8 @@ import { getUserById } from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
 
 const Credits = async () => {
-  const { userId } = auth() as { userId: string };
+  const { userId } = auth();
+
   if (!userId) redirect("/sign-in");
 
   const user = await getUserById(userId);
@@ -42,9 +43,8 @@ const Credits = async () => {
                     className="flex items-center gap-4"
                   >
                     <Image
-                      src={`/assets/icons/${
-                        inclusion.isIncluded ? "check.svg" : "cross.svg"
-                      }`}
+                      src={`/assets/icons/${inclusion.isIncluded ? "check.svg" : "cross.svg"
+                        }`}
                       alt="check"
                       width={24}
                       height={24}

@@ -9,10 +9,9 @@ import { getUserById } from "@/lib/actions/user.actions";
 
 const Profile = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
-  const { userId } = auth() as { userId: string };
+  const { userId } = auth();
 
-  if (!userId)
-    redirect("/sign-in");
+  if (!userId) redirect("/sign-in");
 
   const user = await getUserById(userId);
   const images = await getUserImages({ page, userId: user._id });

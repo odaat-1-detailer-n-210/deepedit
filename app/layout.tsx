@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -8,8 +7,8 @@ import "./globals.css";
 
 const IBMPlex = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-IBM_Plex",
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex'
 });
 
 export const metadata: Metadata = {
@@ -24,14 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider appearance={{
-      variables: { colorPrimary: "#00AE98" }
+      variables: { colorPrimary: '#624cf5' }
     }}>
       <html lang="en">
         <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
-          <header>
-            {children}
-          </header>
-          <Analytics />
+          {children}
         </body>
       </html>
     </ClerkProvider>
