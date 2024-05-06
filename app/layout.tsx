@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -31,6 +32,7 @@ export default function RootLayout({
             {children}
           </header>
         </body>
+        <Analytics />
       </html>
     </ClerkProvider>
   );
